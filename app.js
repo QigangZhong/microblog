@@ -36,7 +36,8 @@ app.use(flash());
 app.use(session({
   secret: settings.cookieSecret,
   store: new MongoStore({
-      db: settings.db,
+      //db: settings.db,
+      url: settings.mongoUrl,
   })
 }));
 
